@@ -2,7 +2,7 @@ name: main_workflow
 on:
   push:
     branches:
-      - nodejs_linter_job
+      - nodejs_jest_job
 jobs:
   linter-execution:
     runs-on: ubuntu-latest
