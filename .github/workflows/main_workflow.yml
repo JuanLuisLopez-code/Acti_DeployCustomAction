@@ -22,6 +22,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run:
-        npm install jest
-        npm test
+      - run: npm install jest
+      - run: npm test
