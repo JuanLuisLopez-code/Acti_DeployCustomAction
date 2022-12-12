@@ -16,4 +16,9 @@ jobs:
           LINTER_RULES_PATH: /
           JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
           VALIDATE_JAVASCRIPT_ES: true
+  
+  test-execution:
+    needs: linter-execution
+    runs-on: ubuntu-latest
+      - uses: actions/checkout@v2
 

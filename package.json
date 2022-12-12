@@ -1,0 +1,22 @@
+{
+  "name": "github-actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanLuisLopez-code/githubActions_examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanLuisLopez-code/githubActions_examples/issues"
+  },
+  "homepage": "https://github.com/JuanLuisLopez-code/githubActions_examples#readme",
+  "dependencies": {
+    "jest": "^29.3.1"
+  }
+}
