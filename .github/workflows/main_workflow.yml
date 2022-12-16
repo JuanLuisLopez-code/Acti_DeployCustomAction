@@ -28,6 +28,7 @@ jobs:
         continue-on-error: true
       - name: Check on failures
         if: job.steps.hello.status == failure() || job.steps.world.status == failure()
+        run: echo aplicaction fail
         # uses: dawidd6/action-send-mail@v3
         # with:
         #   connection_url: ${{secrets.MAIL_CONNECTION}}
