@@ -16,7 +16,7 @@ jobs:
           LINTER_RULES_PATH: /
           JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
           VALIDATE_JAVASCRIPT_ES: true
-  
+
   test-execution:
     needs: linter-execution
     runs-on: ubuntu-latest
@@ -24,3 +24,19 @@ jobs:
       - uses: actions/checkout@v2
       - run: npm install jest
       - run: npm test
+        id: world
+        continue-on-error: true
+      - name: Check on failures
+        if: job.steps.hello.status == failure() || job.steps.world.status == failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          connection_url: ${{secrets.MAIL_CONNECTION}}
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          subject: Github Actions job result
+          to: juanluislopezdaw@gmail.com
+          from: juanluislopezdaw@gmail.com
+          body: Build job of ${{github.repository}} completed successfully!
