@@ -1,0 +1,18 @@
+name: CheckMeme
+description: "Action que comprueba los test"
+inputs:
+  frase_buena:
+    description: "meme bueno"
+    required: true
+  frase_negativa:
+    description: "meme malo"
+    required: true
+  resultado_tests:
+    description: "resultado"
+    required: true
+outputs:
+  msg:
+    description: "mensaje de respuesta"
+runs:
+  using: "node16"
+  main: "dist/index.js"
