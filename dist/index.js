@@ -2832,6 +2832,7 @@ try {
     } else {
         url_meme = url_meme + frase_negativa + '.png'
     }
+    console.log(url_meme)
     fs.writeFileSync('README.md', `<img src="${{url_meme}}"/>`);
 } catch (error) {
 
