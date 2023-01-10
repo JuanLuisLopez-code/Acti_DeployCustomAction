@@ -7,7 +7,7 @@ const resultado_tests = core.getInput('resultado_tests');
 try {
     let url_meme = 'https://api.memegen.link/images/aag/_/'
 
-    if (resultado_tests == 'succes') {
+    if (resultado_tests == 'success') {
         url_meme = url_meme + frase_buena + '.png'
 
     } else {
