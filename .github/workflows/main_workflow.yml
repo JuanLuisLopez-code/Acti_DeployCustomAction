@@ -23,3 +23,7 @@ jobs:
           frase_negativa: "frase_mala"
           resultado_tests: ${{ needs.test-execution.result }}
       - uses: EndBug/add-and-commit@v9
+        with:
+          add: '.'
+          commit: --signoff
+          push: true
