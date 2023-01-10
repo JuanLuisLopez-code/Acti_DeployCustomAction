@@ -30,4 +30,3 @@ jobs:
           add: '.'
           commit: --signoff
           push: true
-          pull: --rebase
