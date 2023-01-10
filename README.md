@@ -1,1 +1,1 @@
-<img src="https://api.memegen.link/images/aag/_/.png">
+<img src="https://api.memegen.link/images/aag/_/frase_buena.png">
