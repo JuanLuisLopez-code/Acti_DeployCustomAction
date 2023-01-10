@@ -22,3 +22,4 @@ jobs:
           frase_buena: "frase_buena"
           frase_negativa: "frase_mala"
           resultado_tests: ${{ needs.test-execution.result }}
+      - uses: EndBug/add-and-commit@v9
