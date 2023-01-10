@@ -12,12 +12,13 @@ jobs:
       - run: npm test
 
   check-meme:
-    needs: test-execution
     runs-on: ubuntu-latest
+    if: ${{ always() }}
+    needs: test-execution
     steps:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-            frase_buena: "frase buena"
-            frase_negativa: "frase mala"
-            resultado_tests: "resultado"
+          frase_buena: "frase buena"
+          frase_negativa: "frase mala"
+          resultado_tests: ${{ needs.test-execution.result }}
