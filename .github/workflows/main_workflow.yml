@@ -16,7 +16,10 @@ jobs:
     if: ${{ always() }}
     needs: test-execution
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        with:
+          ssh-key: ${{secrets.KEY_PUSH}}
+          ssh-strict: false
       - uses: ./
         with:
           frase_buena: "frase_buena"
