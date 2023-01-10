@@ -19,6 +19,6 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-          frase_buena: "frase buena"
-          frase_negativa: "frase mala"
+          frase_buena: "frase_buena"
+          frase_negativa: "frase_mala"
           resultado_tests: ${{ needs.test-execution.result }}
