@@ -22,11 +22,12 @@ jobs:
           ssh-strict: false
       - uses: ./
         with:
-          frase_buena: "frase_buena"
-          frase_negativa: "frase_mala"
+          frase_buena: "Funciona"
+          frase_negativa: "Algo no va"
           resultado_tests: ${{ needs.test-execution.result }}
       - uses: EndBug/add-and-commit@v9
         with:
           add: '.'
           commit: --signoff
           push: true
+          pull: true
