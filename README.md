@@ -1,1 +1,1 @@
-<img src="[object Object]"/>
+<img src="https://api.memegen.link/images/aag/_/.png">
